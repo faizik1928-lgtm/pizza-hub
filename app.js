@@ -121,7 +121,7 @@ function initFlyingCartAnimation() {
 
     const name = trigger.dataset.name || 'Gourmet Dish';
     const price = parseFloat(trigger.dataset.price) || 12.00;
-    const imgSrc = trigger.dataset.img || 'images/user_pizza.jpg';
+    const imgSrc = trigger.dataset.img || 'user_pizza.jpg';
 
     // 1. Add item to cart state
     addToCart(name, price, imgSrc);
@@ -238,7 +238,7 @@ function initMeltingCheeseNav() {
 // ==========================================================================
 // 5. SLIDE-OVER WHATSAPP CART ENGINE (CLEAN & NON-OVERLAPPING)
 // ==========================================================================
-function addToCart(title, price, img = 'images/user_pizza.jpg') {
+function addToCart(title, price, img = 'user_pizza.jpg') {
   const existing = cart.find(item => item.title === title);
   if (existing) {
     existing.qty += 1;
